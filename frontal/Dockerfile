@@ -1,3 +1,2 @@
-FROM php:7.0-apache
-RUN  apt-get update -y && apt-get install libpq-dev -y
-RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql && a2enmod rewrite
+FROM nginx:1.11.12
+COPY nginx.conf /etc/nginx/conf.d/default.conf
