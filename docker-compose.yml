@@ -1,0 +1,28 @@
+database-mysql:
+  build: database-mysql
+  ports:
+    - "3306:3306"
+database-pg:
+  build: database-pg
+  ports:
+    - "5432:5432"
+payara:
+  build: payara
+  command: bin/asadmin start-domain -v
+  ports:
+    - "4848:4848"
+    - "8009:8009"
+    - "8080:8080"
+    - "8181:8181"
+  links:
+    - database-mysql
+    - database-pg
+frontal:
+  build: frontal
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - /tmp:/var/www/html/
+  links:
+    - payara

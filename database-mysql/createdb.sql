@@ -1,0 +1,4 @@
+-- CREATE USER "root" WITH PASSWORD 'root';
+-- CREATE DATABASE world WITH OWNER "root";
+-- GRANT ALL PRIVILEGES ON DATABASE world TO "root";
+

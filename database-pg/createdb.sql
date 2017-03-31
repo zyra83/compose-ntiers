@@ -1,0 +1,4 @@
+CREATE USER "mickael" WITH PASSWORD 'monpass';
+CREATE DATABASE mabdd WITH OWNER "mickael";
+GRANT ALL PRIVILEGES ON DATABASE mabdd TO "mickael";
+
