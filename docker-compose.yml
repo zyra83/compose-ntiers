@@ -7,8 +7,17 @@ frontal:
     - payara
 payara:
   build: payara
-  command: bin/asadmin start-domain -v
+  command: bin/asadmin start-domain -v --debug true
   links:
     - database-mysql
+  ports:
+    - "4848:4848"
+    - "8080:8080"
+    - "8081:8081"
+    - "9009:9009"
+    - "8009:8009"
 database-mysql:
   build: database-mysql
+  ports:
+    - "3306:3306"
+  

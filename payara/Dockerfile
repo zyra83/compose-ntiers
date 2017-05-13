@@ -15,4 +15,4 @@ $PAYARA_PATH/bin/asadmin --user $ADMIN_USER --passwordfile=/opt/pwdfile create-j
 
 COPY WorldServices.war /opt/payara41/glassfish/domains/domain1/autodeploy
 
-EXPOSE 4848 8009 8080 8181
+EXPOSE 4848 8009 9009 8080 8181

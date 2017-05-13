@@ -196,3 +196,9 @@ EXAMPLES
 
                $PAYARA_PATH/bin/asadmin --user $ADMIN_USER --passwordfile=/opt/pwdfile list-jdbc-connection-pools
 
+
+
+# LOGSPOUT
+
+--build-arg http_proxy=http://user:motdepasse@monproxy.com:3128 --build-arg https_proxy=https://user:motdepasse@monproxy.com:3128
+
